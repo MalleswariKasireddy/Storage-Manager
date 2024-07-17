@@ -1,0 +1,72 @@
+---------------------------------------------------------------->Assignment-1: Storage Manager<------------------------------------------------------------- 
+
+Team: 	   A) Satish Reddy Janpalli  (A20502100)
+           B) Venkata Suryanarayan Vaddadi (A20494154)
+           C) Nirali Rajpura (A20502873)
+
+Given Task: To deploy a system which is capable of reading the blocks from a file on disk into memory and writing blocks from to a file on a disk.
+
+In this Assignment we have all the files that has to be uploaded to the bitbucket, and the list of files that are include in the repository of the bit bucket are as follows:
+
+ A) README.txt
+ B) makefile
+ C) dberror.c
+ D) dberror.h
+ E) storage_mgr.c
+ F) storage_mgr.h
+ G) test_assign1_1.c
+ H) test_helper.h
+
+Contents in readme: A) Instructions on how to run the code
+                    B) Defining the functions and their uses
+
+--------------------------------------------------------------STORAGE MANAGER-------------------------------------------------------------------------------
+Instructions on how to run a code:
+---------------------------------
+-> open the git bash terminal in the desktop.
+
+-> Then clone our repository from the bitbucket and save the folder in your desktop.
+
+-> After saving our repository in your desired path, in the bash terminal assign the path to the assignment file and open it.
+
+-> To run the make file use the command mingw32-make in the bash terminal of your desktop.
+
+-> After running the make command you will encounter with the output as shown below:
+
+ gcc -o output test_assign1_1.c storage_mgr.c dberror.c
+
+-> While running the file please ensure that the output file is not present, if it is present use the command mingw32-make clean to remove the output file.
+
+-> After running the make command when you see the gcc message as shown above, run the following command to test the functionalities 
+ ./output
+
+-> After running the above command you will see that the code is executed successfully when you see the message OK: finished test
+
+--------------------------------------------------------------------------
+Defining the functions and their uses:
+-------------------------------------
+MANIPULATING PAGE FILES:
+
+ 1) createPageFile: This function is used to create a page file
+ 2) openPageFile: This function is used to open the page file
+ 3) closePageFile: This function is used to close the page file 
+ 4) destroyPageFile: This function is used to destroy the page file 
+
+--------------------------------------------------------------------------
+READING BLOCKS FROM THE DISC:
+ 
+ 1) readBlock: open the page file and read each block of the page file
+ 2) getBlockPos: This function is used to get the position of the block in the page file
+ 3) readFirstBlock: This function is used to read the first Block of the page file
+ 4) readPreviousBlock: This function is used to read the previous block from the current position of the page file 
+ 5) readCurrentBlock: This function is used to read the current block of the page file
+ 6) readNextBlock: This function is used to read the next block of page file 
+ 7) readLastBlock: This function is used to read the Last Block of the page file 
+-------------------------------------------------------------------
+
+ WRITING BLOCKS TO A PAGE FILE:
+
+ 1) writeBlock: This function is used to Write in the block 
+ 2) writeCurrentBlock: This function is used write in the current Block  
+ 3) appendEmptyBlock: This function is used append the Empty Block 
+ 4) ensureCapacity: This function is used ensure that the capacity is not full of page file 
